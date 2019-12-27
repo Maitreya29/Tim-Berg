@@ -61,6 +61,9 @@ async def PAB(ctx):
 async def BMM(ctx):
     await ctx.author.send('BMM - https://dbree.org/v/39ec8b')
     await ctx.send('Check DM, link to Beat My Meat sent!')
-
+@client.command()
+async def Antrox(aliases=[gay,ANTROX,antrox]):
+    await ctx.send("Please don't say that name, Lord shoves a lightning bolt inside me each time you use that gay name." )
+    await ctx.author.send("Don't say that word!! Antrox isn't allowed")
 client.run(os.environ['TOKEN'])
 

@@ -12,7 +12,7 @@ async def on_member_join(member):
     print(f'{member} has joined')
 @client.event
 async def on_member_remove(member):
-    print(f'{member} has left')
+  await  member.send(f'{member} has left')
 @client.command()
 async def about(ctx):
     await ctx.send(f'I am a bot. {round(client.latency *1000)} ms is the latency')

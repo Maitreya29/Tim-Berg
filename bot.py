@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import random
-import os
 
 client = commands.Bot(command_prefix='.')
 
@@ -21,4 +20,4 @@ async def about(ctx):
 async def _8ball(ctx, *, question):
     responses= [' It is certain','It is decidedly so','Without a doubt.','Yes - definitely.','You may rely on it.','As I see it, yes.','Most likely','Outlook good.','Yes.','Signs point to yes','try again','try again','try again','try again','try again','I dont think so, no.','My reply is no','I dont see that happening','I am sorry but, no.','Eh, no.']
     await ctx.send(f'Question: {question} \nAnswer: {random.choice(responses)}')
-client.run('NjU5OTg5OTYyODc5NDAyMDA0.XgXAJQ.XLXVb517Qg-pU-NV7eTVnYBCtkI')
+client.run('NjU5OTg5OTYyODc5NDAyMDA0.XgXBZg.HU0Wa1IPdZpTrLxLZ5XJ-ZOEtEo')

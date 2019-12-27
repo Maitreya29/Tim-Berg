@@ -57,8 +57,8 @@ async def PAB(ctx):
     await ctx.send("PAB IS GAY, DON'T MENTION IT IT'S A FUCKING DISGRACE ")
 @client.command()
 async def BMM(ctx, member):
-    await ctx.member.send('https://seee/')
-    await member.send('lulz')
+    await ctx.author.send('BMM - https://dbree.org/v/39ec8b')
+    await ctx.send('Check DM, link to Beat My Meat sent!')
 
 client.run(os.environ['TOKEN'])
 

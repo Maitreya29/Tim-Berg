@@ -6,11 +6,20 @@ import os
 from discord import channel
 
 client = commands.Bot(command_prefix='.')
-
+censored=['PAB']
 @client.event
 async def on_ready():
     await client.change_presence(status=discord.Status.idle, activity=discord.Game("Dinner with Papa Klas"))
     print('Hello, I am ready')
+@client.event
+async def on_message(message):
+    contents=message.content.split(" ")
+    for word in contents:
+        if word.upper() in censored:
+            try:
+                await channel.send("EWW PLEASE DON'T USE THAT UGLY WORD!!!")
+            except discord.errors.NotFound:
+                return
 @client.event
 async def on_member_join(member):
     await channel.send(f'{member} Thank you for joining')
@@ -27,7 +36,7 @@ async def about(ctx):
 
 @client.command(aliases=['8ball','eightball'])
 async def _8ball(ctx, *, question):
-    responses= ['ewww no.','eww no.']
+    responses= [' It is certain','It is decidedly so','Without a doubt.','Yes - definitely.','You may rely on it.','As I see it, yes.','Most likely','Outlook good.','Yes.','Signs point to yes','I dont think so, no.','My reply is no','I dont see that happening','I am sorry but, no.','Eh, no.']
     await ctx.send(f'Question: {question} \nAnswer: {random.choice(responses)}')
 
 @client.command()

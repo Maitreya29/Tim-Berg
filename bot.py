@@ -13,16 +13,6 @@ async def on_ready():
     await client.change_presence(status=discord.Status.idle, activity=discord.Game("Dinner with Papa Klas"))
     print('Hello, I am ready')
 @client.event
-async def on_message(message):
-    id = client.get_guild(658994196350500865)
-    contents=message.content.split(" ")
-    for word in contents:
-        if word.upper() in censored:
-            try:
-                channel.send("EWW PLEASE DON'T USE THAT UGLY WORD!!!")
-            else:
-                return
-@client.event
 async def on_member_join(member):
     await channel.send(f'{member} Thank you for joining')
 

@@ -26,9 +26,9 @@ async def _8ball(ctx, *, question):
     responses= [' It is certain','It is decidedly so','Without a doubt.','Yes - definitely.','You may rely on it.','As I see it, yes.','Most likely','Outlook good.','Yes.','Signs point to yes','try again','try again','try again','try again','try again','I dont think so, no.','My reply is no','I dont see that happening','I am sorry but, no.','Eh, no.']
     await ctx.send(f'Question: {question} \nAnswer: {random.choice(responses)}')
 
-@client.command
+@client.command()
 async def clear(ctx, amount):
     await ctx.channel.purge(limit=amount)
-    
+
 client.run(os.environ['TOKEN'])
 

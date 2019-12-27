@@ -21,11 +21,11 @@ async def on_member_remove(member):
 
 @tasks.loop(seconds=20)
 async def  change_status():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Game(next(status)))
+    await client.change_presence(activity=discord.Game(next(status)))
 
 @client.command()
 async def about(ctx):
-    await ctx.send(f'I am a bot. {round(client.latency *1000)} ms is the latency')
+    await ctx.send(f'I am a bot. I was developed by Maitreya Patni who is a 13 year old student. I can do multiple things that a bot must! incae you want any extra features to be added, please ping @MaitreyaPatni29#9239')
 
 @client.command(aliases=['8ball','eightball'])
 async def _8ball(ctx, *, question):
@@ -33,15 +33,18 @@ async def _8ball(ctx, *, question):
     await ctx.send(f'Question: {question} \nAnswer: {random.choice(responses)}')
 
 @client.command()
+@commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount=6):
     await ctx.channel.purge(limit=amount)
 
 @client.command()
+@commands.has_permissions(Administrator=True)
 async def kick(ctx, member: discord.Member, *, reason=None):
     await member.kick(reason=reason)
     await ctx.send(f'{member} was Kicked because {reason}')
 
 @client.command()
+@commands.has_permissions(Administrator=True)
 async def ban(ctx, member: discord.Member, *, reason=None):
     await member.ban(reason=reason)
     await ctx.send(f'{member} was banned because {reason}')

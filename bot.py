@@ -20,7 +20,7 @@ async def on_member_remove(member):
     await member.send(f'{member} Thank you for joining.')
 
 @tasks.loop(seconds=20)
-async def  change_status:
+async def  change_status():
     await client.change_presence(status=discord.Status.idle, activity=discord.Game(next(status)))
 
 @client.command()

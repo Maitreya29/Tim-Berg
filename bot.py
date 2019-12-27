@@ -4,6 +4,8 @@ from itertools import cycle
 import random
 import os
 from discord import channel
+import asyncio
+
 
 client = commands.Bot(command_prefix='.')
 censored=['PAB']

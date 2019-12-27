@@ -1,14 +1,15 @@
 import discord
-from discord.ext import commands
+from discord.ext import commands, tasks
+from itertools import cycle
 import random
 import os
 from discord import channel
 
 client = commands.Bot(command_prefix='.')
-
+status=cycle(['Helping You','Having dinner with Papa Klas!'])
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Game('Helping you!'))
+
     print('Hello, I am ready')
 @client.event
 async def on_member_join(member):
@@ -17,6 +18,10 @@ async def on_member_join(member):
 @client.event
 async def on_member_remove(member):
     await member.send(f'{member} Thank you for joining.')
+
+@tasks.loop(seconds=20)
+async def  change_status:
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game(next(status)))
 
 @client.command()
 async def about(ctx):

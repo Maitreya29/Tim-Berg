@@ -11,10 +11,13 @@ async def on_ready():
     print('Hello, I am ready')
 @client.event
 async def on_member_join(member):
+    await member.send(f'{member} has joined')
+    await channel.send('someone has joined')
     await channel.send(f'{member} has joined')
 @client.event
 async def on_member_remove(member):
   await  member.send(f'{member} has left')
+  await  channel.send(f'{member} has left')
 @client.command()
 async def about(ctx):
     await ctx.send(f'I am a bot. {round(client.latency *1000)} ms is the latency')

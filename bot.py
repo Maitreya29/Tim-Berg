@@ -57,8 +57,8 @@ async def helpme(ctx):
 @client.command()
 async def PAB(ctx):
     await ctx.send("PAB IS GAY, DON'T MENTION IT IT'S A FUCKING DISGRACE ")
-@client.command()
-async def BMM(ctx, member):
+@client.command(aliases=['bmm','Bmm'])
+async def BMM(ctx):
     await ctx.author.send('BMM - https://dbree.org/v/39ec8b')
     await ctx.send('Check DM, link to Beat My Meat sent!')
 

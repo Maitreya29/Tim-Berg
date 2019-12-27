@@ -55,6 +55,11 @@ async def helpme(ctx):
 @client.command()
 async def PAB(ctx):
     await ctx.send("PAB IS GAY, DON'T MENTION IT IT'S A FUCKING DISGRACE ")
+@client.command()
+async def PAB(ctx):
+    await ctx.send("PAB IS GAY, DON'T MENTION IT IT'S A FUCKING DISGRACE ")
+async def BMM(ctx):
+    await ctx.member.send('https://seee/')
 
 client.run(os.environ['TOKEN'])
 

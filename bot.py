@@ -49,6 +49,10 @@ async def ban(ctx, member: discord.Member, *, reason=None):
     await member.ban(reason=reason)
     await ctx.send(f'{member} was banned because {reason}')
 
+@client.command()
+async def help(ctx):
+    await ctx.send("Here is a list of commands currently Available /nyou can use .8ball (question) to use the 8 ball command./nsample: .8ball am I gay?/nOutput: 8Ball replies with a random message/nyou can use .clear  to delete the last 6 messages./nsample: .clear /noutput: last 6 messages are deleted /n(optional: you can add a value after .clear to delete a certain number of messages./nsample: .clear 20 /noutput: This deletes last 20 messages/nyou can use .kick to kick a user./nsample: .kick @xyz#6976 I don't like you /noutput: User is kicked, Bot prints '@xyz#6967 was kicked because I don't like you' /nyou can use .ban to ban a user. /nsample: .ban @xyz#6976 I don't like you /noutput: User is banned, Bot prints '@xyz#6967 was banned because I don't like you')")
+
 
 client.run(os.environ['TOKEN'])
 

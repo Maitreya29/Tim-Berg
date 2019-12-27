@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import random
 import os
+from discord import channel
+
 client = commands.Bot(command_prefix='.')
 
 @client.event
@@ -9,7 +11,7 @@ async def on_ready():
     print('Hello, I am ready')
 @client.event
 async def on_member_join(member):
-    print(f'{member} has joined')
+    await channel.send(f'{member} has joined')
 @client.event
 async def on_member_remove(member):
   await  member.send(f'{member} has left')

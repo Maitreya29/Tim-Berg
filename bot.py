@@ -8,6 +8,7 @@ client = commands.Bot(command_prefix='.')
 
 @client.event
 async def on_ready():
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game('Helping you!'))
     print('Hello, I am ready')
 @client.event
 async def on_member_join(member):

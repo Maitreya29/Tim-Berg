@@ -64,6 +64,8 @@ async def BMM(ctx):
 @client.command(aliases=['gay','ANTROX','antrox'])
 async def Antrox(ctx):
     await ctx.send("Please don't say that name, Lord shoves a lightning bolt inside me each time you use that gay name." )
+    await ctx.send("https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/06/14/09/istock-520801128.jpg \n leaked image of Antrox and his buddies.")
     await ctx.author.send("Don't say that word!! Antrox isn't allowed")
+
 client.run(os.environ['TOKEN'])
 

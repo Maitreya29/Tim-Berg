@@ -62,6 +62,9 @@ async def BMM(ctx):
     await ctx.author.send('BMM - https://dbree.org/v/39ec8b')
     await ctx.send('Check DM, link to Beat My Meat sent!')
 
+@client.command(aliases=['sneknudes'])
+async def nakedsnake(ctx):
+    await ctx.send('https://pbs.twimg.com/media/Ci1IszpWYAIfHi8?format=jpg&name=900x900 okay')
 
 client.run(os.environ['TOKEN'])
 

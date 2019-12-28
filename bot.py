@@ -33,18 +33,19 @@ async def _8ball(ctx, *, question):
     await ctx.send(f'Question: {question} \nAnswer: {random.choice(responses)}')
 
 @client.command()
-
+@commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount=6):
+
     await ctx.channel.purge(limit=amount)
 
 @client.command()
-@commands.has_permissions(Administrator=True)
+@commands.has_permissions(manage_messages=True)
 async def kick(ctx, member: discord.Member, *, reason=None):
     await member.kick(reason=reason)
     await ctx.send(f'{member} was Kicked because {reason}')
 
 @client.command()
-@commands.has_permissions(Administrator=True)
+@commands.has_permissions(manage_messages=True)
 async def ban(ctx, member: discord.Member, *, reason=None):
     await member.ban(reason=reason)
     await ctx.send(f'{member} was banned because {reason}')

@@ -54,18 +54,10 @@ async def ban(ctx, member: discord.Member, *, reason=None):
 async def helpme(ctx):
     await ctx.send("Here is a list of commands currently Available \nyou can use .8ball (question) to use the 8 ball command.\nsample: .8ball am I gay?\nOutput: 8Ball replies with a random message\nyou can use .clear  to delete the last 6 messages.\nsample: .clear \noutput: last 6 messages are deleted \n(optional: you can add a value after .clear to delete a certain number of messages.\nsample: .clear 20 \noutput: This deletes last 20 messages\nyou can use .kick to kick a user.\nsample: .kick @xyz#6976 I don't like you \noutput: User is kicked, Bot prints '@xyz#6967 was kicked because I don't like you' \nyou can use .ban to ban a user. \nsample: .ban @xyz#6976 I don't like you \noutput: User is banned, Bot prints '@xyz#6967 was banned because I don't like you')")
 
-@client.command()
-async def PAB(ctx):
-    await ctx.send("PAB IS GAY, DON'T MENTION IT IT'S A FUCKING DISGRACE ")
 @client.command(aliases=['bmm','Bmm'])
 async def BMM(ctx):
     await ctx.author.send('BMM - https://dbree.org/v/39ec8b')
     await ctx.send('Check DM, link to Beat My Meat sent!')
-@client.command(aliases=['gay','ANTROX','antrox'])
-async def Antrox(ctx):
-    await ctx.send("Please don't say that name, Lord shoves a lightning bolt inside me each time you use that gay name." )
-    await ctx.send("https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/06/14/09/istock-520801128.jpg \n leaked image of Antrox and his buddies.")
-    await ctx.author.send("Don't say that word!! Antrox isn't allowed")
 
 client.run(os.environ['TOKEN'])
 

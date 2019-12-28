@@ -22,8 +22,6 @@ async def on_member_join(member):
 async def on_member_remove(member):
     await member.send(f'{member} Thank you for joining.')
 
-@client.event
-async def on_
 
 @client.command()
 async def about(ctx):

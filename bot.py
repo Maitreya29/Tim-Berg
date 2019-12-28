@@ -48,7 +48,7 @@ async def kick(ctx, member: discord.Member, *, reason=None):
 @commands.has_permissions(manage_messages=True)
 async def ban(ctx, member: discord.Member, *, reason=None):
     await member.ban(reason=reason)
-    await ctx.send(f'{member} was banned because {reason}')
+    await ctx.send(f'@{member} was banned because {reason}')
 
 @client.command()
 async def helpme(ctx):

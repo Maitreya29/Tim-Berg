@@ -66,5 +66,8 @@ async def BMM(ctx):
 async def nakedsnake(ctx):
     await ctx.send('https://pbs.twimg.com/media/Ci1IszpWYAIfHi8?format=jpg&name=900x900 okay')
 
+@client.command()
+async def beautifulpic(ctx):
+    await ctx.send('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcGI6UFeAaOV9bHLlQjzD-XIkL8mVqmKm9ThpRmAuvw8CP_qCi&s very beautiful image')
 client.run(os.environ['TOKEN'])
 

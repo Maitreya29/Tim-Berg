@@ -57,5 +57,4 @@ Werkzeug==0.16.0
 wrapt==1.11.2
 yarl==1.4.2
 youtube-dl==2019.12.25
-youtube-dl
 youtube_dl

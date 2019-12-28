@@ -22,7 +22,8 @@ async def on_member_join(member):
 async def on_member_remove(member):
     await member.send(f'{member} Thank you for joining.')
 
-
+@client.event
+async def on_
 
 @client.command()
 async def about(ctx):
@@ -34,7 +35,7 @@ async def _8ball(ctx, *, question):
     await ctx.send(f'Question: {question} \nAnswer: {random.choice(responses)}')
 
 @client.command()
-@commands.has_permissions(manage_messages=True)
+
 async def clear(ctx, amount=6):
     await ctx.channel.purge(limit=amount)
 

@@ -15,7 +15,7 @@ players = {}
  
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Game("Dinner with Papa Klas"))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game("Avicii | By MaitreyaPatni29"))
     print('Hello, I am ready')
 @client.event
 async def on_member_join(member):
@@ -58,10 +58,13 @@ async def BMM(ctx):
     await ctx.author.send('BMM - https://dbree.org/v/39ec8b')
     await ctx.send('Check DM, link to Beat My Meat sent!')
 
-@client.command(aliases=['leak','leakedsongs','leaks'])
+@client.command(aliases=['leak','leakedsongs','leaks','Leak'])
 async def Leaks(ctx):
     await ctx.author.send('https://mega.nz/#F!liIRUaSR!TjZVna3mHZWk6CRT3kiP2Q')
     await ctx.send('Check DMs, Link to all leaked songs sent to DMs. \n  This is the new set of leaks : https://media.discordapp.net/attachments/617859698875432968/666275268150820884/unknown.png?width=799&height=666 \n old leaks are also included in link.')
 
+@client.command()
+async def Clown(ctx):
+    await ctx.send('My creator "MaitreyaPatni29 aka Indian Kebab" is a clown')
 client.run(os.environ['TOKEN'])
 

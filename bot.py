@@ -58,7 +58,7 @@ async def BMM(ctx):
     await ctx.author.send('BMM - https://dbree.org/v/39ec8b')
     await ctx.send('Check DM, link to Beat My Meat sent!')
 
-@client.command(aliases=['leak','leakedsongs'])
+@client.command(aliases=['leak','leakedsongs','leaks'])
 async def Leaks(ctx):
     await ctx.author.send('https://mega.nz/#F!liIRUaSR!TjZVna3mHZWk6CRT3kiP2Q')
     await ctx.send('Checks DM, Link to all leaked songs sent to DMs.')

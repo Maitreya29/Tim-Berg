@@ -61,7 +61,7 @@ async def BMM(ctx):
 @client.command(aliases=['leak','leakedsongs','leaks'])
 async def Leaks(ctx):
     await ctx.author.send('https://mega.nz/#F!liIRUaSR!TjZVna3mHZWk6CRT3kiP2Q')
-    await ctx.send('Checks DM, Link to all leaked songs sent to DMs.')
+    await ctx.send('Check DMs, Link to all leaked songs sent to DMs.')
 
 client.run(os.environ['TOKEN'])
 

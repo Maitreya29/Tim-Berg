@@ -66,5 +66,9 @@ async def Leaks(ctx):
 @client.command()
 async def Clown(ctx):
     await ctx.send('My creator "MaitreyaPatni29 aka Indian Kebab" is a clown')
+
+@client.command()
+async def d(ctx):
+    await ctx.send('YOOOO WTF NICKTIM IS YEEEZUS HEHEHEHEH KJMKJLKLLKOJIJU')
 client.run(os.environ['TOKEN'])
 

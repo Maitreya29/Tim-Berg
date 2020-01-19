@@ -3,19 +3,16 @@ from discord.ext import commands
 from itertools import cycle
 import random
 import os
-from discord import channel
-import asyncio
-import youtube_dl
+
 
 
 client = commands.Bot(command_prefix='.')
-censored=['Indian Kebab','IndianKebab','Indian kebab','indiankebab']
 
 players = {}
  
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Game("Avicii | By MaitreyaPatni29"))
+    await client.change_presence(status=discord.Status.online, activity=discord.Game("Avicii | By MaitreyaPatni29"))
     print('Hello, I am ready')
 @client.event
 async def on_member_join(member):
@@ -63,12 +60,8 @@ async def Leaks(ctx):
     await ctx.author.send('https://mega.nz/#F!liIRUaSR!TjZVna3mHZWk6CRT3kiP2Q')
     await ctx.send('Check DMs, Link to all leaked songs sent to DMs. \n  This is the new set of leaks : https://media.discordapp.net/attachments/617859698875432968/666275268150820884/unknown.png?width=799&height=666 \n old leaks are also included in link.')
 
-@client.command()
-async def Clown(ctx):
-    await ctx.send('My creator "MaitreyaPatni29 aka Indian Kebab" is a clown')
-
-@client.command()
-async def d(ctx):
-    await ctx.send('YOOOO WTF NICKTIM IS YEEEZUS HEHEHEHEH KJMKJLKLLKOJIJU')
+@client.comman(aliases=['CurretBuys','currentBuys','Currentbuys','songBuys','SongBuys','Songbuys','songbuys'])
+async def currentbuys(ctx):
+    await ctx.send('Name: Avicii Public Buy◢◤ \n Currently buying: Nothing \n Invite link:https://discord.gg/tkXCnNA \n \n Name: Public Avicii Buy \n Currently buying: Avicii - I Want You feat. Aloe Blacc \n Invite link: https://discord.gg/KgHDcDq \n \n Name: Kygo Groupbuy \n Currently buying: Nothing \n Invite link: https://discord.gg/Vy2FBwx')
 client.run(os.environ['TOKEN'])
 

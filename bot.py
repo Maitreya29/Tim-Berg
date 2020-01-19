@@ -60,7 +60,7 @@ async def Leaks(ctx):
     await ctx.author.send('https://mega.nz/#F!liIRUaSR!TjZVna3mHZWk6CRT3kiP2Q')
     await ctx.send('Check DMs, Link to all leaked songs sent to DMs. \n  This is the new set of leaks : https://media.discordapp.net/attachments/617859698875432968/666275268150820884/unknown.png?width=799&height=666 \n old leaks are also included in link.')
 
-@client.comman(aliases=['CurretBuys','currentBuys','Currentbuys','songBuys','SongBuys','Songbuys','songbuys'])
+@client.command(aliases=['CurretBuys','currentBuys','Currentbuys','songBuys','SongBuys','Songbuys','songbuys'])
 async def currentbuys(ctx):
     await ctx.send('Name: Avicii Public Buy◢◤ \n Currently buying: Nothing \n Invite link:https://discord.gg/tkXCnNA \n \n Name: Public Avicii Buy \n Currently buying: Avicii - I Want You feat. Aloe Blacc \n Invite link: https://discord.gg/KgHDcDq \n \n Name: Kygo Groupbuy \n Currently buying: Nothing \n Invite link: https://discord.gg/Vy2FBwx')
 client.run(os.environ['TOKEN'])

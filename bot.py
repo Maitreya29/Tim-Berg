@@ -33,10 +33,10 @@ async def _8ball(ctx, *, question):
     await ctx.send(f'Question: {question} \nAnswer: {random.choice(responses)}')
 
 @client.command()
-@commands.has_permissions()
+@commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount=6):
-
     await ctx.channel.purge(limit=amount)
+    await ctx.send(f'I deleted `{amount}` Messages.`')
 
 @client.command()
 @commands.has_permissions(manage_messages=True)

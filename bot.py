@@ -27,7 +27,7 @@ async def on_member_remove(member):
 async def about(ctx):
     await ctx.send(f'I am a bot. I was developed by Maitreya Patni who is a 13 year old student. I can do multiple things that a bot must! incae you want any extra features to be added, please ping @MaitreyaPatni29#9239')
 
-@client.command(aliases=['8Ball','eightball'])
+@client.command(aliases=['8Ball','eightball','8ball'])
 async def _8ball(ctx, *, question):
     responses= [' It is certain','It is decidedly so','Without a doubt.','Yes - definitely.','You may rely on it.','As I see it, yes.','Most likely','Outlook good.','Yes.','Signs point to yes','I dont think so, no.','My reply is no','I dont see that happening','I am sorry but, no.','Eh, no.']
     await ctx.send(f'Question: {question} \nAnswer: {random.choice(responses)}')
@@ -63,5 +63,6 @@ async def Leaks(ctx):
 @client.command(aliases=['CurretBuys','currentBuys','Currentbuys','songBuys','SongBuys','Songbuys','songbuys'])
 async def currentbuys(ctx):
     await ctx.send('Name: Avicii Public Buy◢◤ \n Currently buying: Nothing \n Invite link:https://discord.gg/tkXCnNA \n \n Name: Public Avicii Buy \n Currently buying: Avicii - I Want You feat. Aloe Blacc \n Invite link: https://discord.gg/KgHDcDq \n \n Name: Kygo Groupbuy \n Currently buying: Nothing \n Invite link: https://discord.gg/Vy2FBwx')
+
 client.run(os.environ['TOKEN'])
 
